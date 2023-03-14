@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Cat Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Kaushan+Script&family=Single+Day&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+	margin:0;
+	padding:0;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Kaushan Script', cursive;
+	font-family: 'Single Day', cursive;
+	}
+	body {
+	align-items:center;
+	justify-content:center;
+	display:flex;
+	position:absolute;
+	top:30px;
+	left:3%;
+	right:3%;
+	}
+	h1 {
+	font-size:50px;
+	color:gray;
+	}
+	#cat-container {
+	width: 500px;
+	height: 500px;
+	margin: 20px auto;
+	background-color:white;
+	color:gray;
+	box-shadow:10px 10px 30px rgba(0,0,0,0.1);
+	border-radius:10%;
+	font-weight: 900;
+	font-size: 18px;
+	border:none;
+	border-color:rgba(0,0,0,0);
+	overflow: hidden;
+	top:100px;
+	position:absolute;
+	left:3%;
+	right:3%;
+	}
+	
+	#cat-container img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	}
+	button {
+	height:50px;
+	position:absolute;
+	top:650px;
+	left:35%;
+	position: absolute;
+	width: 150px;
+	background-color:white;
+	color:gray;
+	box-shadow:10px 10px 30px rgba(0,0,0,0.1);
+	border-radius:10%;
+	font-weight: 900;
+	font-size: 18px;
+	border:none;
+	font-family: 'Gloria Hallelujah', arial;
+	border-color:rgba(0,0,0,0);
+	
+	}
+	.eh {
+	position:absolute;
+	top:900px;
+	}
+	
+	</style>
+</head>
+<body>
+	<h1>Random Cat Generator</h1>
+	<button onclick="generateCat()">Get Random Cat</button>
+	<div id="cat-container"></div>
+    <div class="eh" >this website is createdby Nheo_Jhon</div>
+	<script type="text/javascript">
+	function generateCat() {
+	// create a new image element
+	var catImage = document.createElement("img");
+	catImage.setAttribute("src", "https://cataas.com/cat");
+	catImage.setAttribute("alt", "Random Cat");
+	
+	// find the cat container and replace its content with the new image
+	var catContainer = document.getElementById("cat-container");
+	catContainer.innerHTML = "";
+	catContainer.appendChild(catImage);
+	}
+	
+	</script>
+</body>
+</html>
